@@ -11,8 +11,8 @@ public class Audio : MonoBehaviour
     }
 
     // ‚Ô‚Â‚©‚Á‚½Žž‚É‰¹‚ð–Â‚ç‚·
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Adi.PlayOneShot(se); 
+        Adi.PlayOneShot(se);
     }
 }
