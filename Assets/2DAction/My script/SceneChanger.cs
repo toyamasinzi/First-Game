@@ -15,7 +15,7 @@ public class SceneChanger : MonoBehaviour
         }
 
         if(count < timer)
-        {
+        { 
             SceneManager.LoadScene(Scene);
         }
     }
