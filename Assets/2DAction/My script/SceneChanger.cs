@@ -3,9 +3,9 @@ using UnityEngine.SceneManagement;
 
 public class SceneChanger : MonoBehaviour
 {
-    [SerializeField] float count = 2;
+    [SerializeField] float count = 2f;
     [SerializeField] string Scene = "Game";
-    private float timer = 0;
+    private float timer = 0f;
     bool istimer = false;
     void Update()
     {
