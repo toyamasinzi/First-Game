@@ -50,7 +50,7 @@ public class Timer : MonoBehaviour
             stop = true;
             SaveData savedata = new SaveData(_CountTime.ToString("F1"));
             PlayerPrefs.SetString("SaveData", _CountTime.ToString("F1"));
-            Debug.Log("json");
+            //Debug.Log("json");
             SceneManager.LoadScene(Scene);
             //Timer _time = gameObject.AddComponent<Timer>();
             /*PlayerPrefs.SetString("time", nowTime);

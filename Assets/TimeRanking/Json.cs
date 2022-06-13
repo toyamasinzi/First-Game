@@ -6,21 +6,21 @@ using UnityEngine.UI;
 public class Json : MonoBehaviour
 {
     [SerializeField] GameObject tim;
-    string savadata = PlayerPrefs.GetString("SaveData");
+    public string savadata = PlayerPrefs.GetString("SaveData");
 
-    string _r = PlayerPrefs.GetString("Save");
     private void Start()
     {
        string trm = PlayerPrefs.GetString("SaveData");//ロード
         Ranking1 rank = new Ranking1(trm.Split(','));
-        PlayerPrefs.SetString("Save", trm.ToString());
-         float _tim = float.Parse(trm);
+        PlayerPrefs.SetString("Save", rank.ToString());
+        string _r = PlayerPrefs.GetString("Save");
+        float _tim = float.Parse(trm);
+        float _rn = float.Parse(_r);//エラー文字列が正しい形式ではありませんでした。
 
-        float _rn = float.Parse(_r);
-
-         if (_tim > _rn)
+        if (_tim < _rn)
         {
+           // Debug.Log("sava");
             tim.GetComponent<Text>().text = trm;
-        } 
+        }
     }
 }
