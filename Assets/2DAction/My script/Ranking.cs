@@ -10,9 +10,9 @@ public class Ranking : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-       string trm = PlayerPrefs.GetString("time","999");
+      /* string trm = PlayerPrefs.GetString("time","999");
         tim.GetComponent<Text>().text = trm;
-        PlayerPrefs.DeleteAll();
+        PlayerPrefs.DeleteAll();*/
     }
 
     // Update is called once per frame

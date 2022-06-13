@@ -12,7 +12,7 @@ public class Enemy2 : MonoBehaviour
         //プレイヤー-敵キャラの位置関係から方向を取得し、速度を一定化
         Vector2 targeting = (player2.transform.position - this.transform.position).normalized;
         //プレイヤー追う
-        this.GetComponent<Rigidbody2D>().velocity = new Vector2((targeting.x * 3), (targeting.y * 3));
+        this.GetComponent<Rigidbody2D>().velocity = new Vector2((targeting.x * speed), (targeting.y * speed));
     }
     void OnCollisionEnter2D(Collision2D collision)
     {

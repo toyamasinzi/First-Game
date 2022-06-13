@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.IO;
 
 public class Timer : MonoBehaviour
 {
@@ -12,40 +13,62 @@ public class Timer : MonoBehaviour
 
     public string nowTime;
 
-    private float _testCountTime;
+    public float _CountTime;
+    string datapath;
+    private string _Save;
 
-    string time;
-    //private Text te;
-    // Start is called before the first frame update
+    public void Awake()
+    {
+        datapath = Application.dataPath + "/TimeRanking";
+    }
     void Start()
     {
         gameObject.GetComponent<Text>();
         trm = GameObject.Find("_timer");
-        _testCountTime = 0;
+        _CountTime = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(stop == false)
+        if (stop == false)
         {
-            _testCountTime += Time.deltaTime;
+            _CountTime += Time.deltaTime;
+            trm.GetComponent<Text>().text = _CountTime.ToString("F1");
             //trm.GetComponent<Text>().text = Time.time.ToString("F1");
-            trm.GetComponent<Text>().text = _testCountTime.ToString("F1");
-            nowTime = _testCountTime.ToString("F1");
-        }
-       
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if(gameObject.tag =="Goal")
-        {
-            stop = true;
-            PlayerPrefs.SetString("time", nowTime);
-            PlayerPrefs.Save();
-            Debug.Log(PlayerPrefs.GetString("time") + "Save");
-            SceneManager.LoadScene(Scene);
+            //json _c =  _CountTime.ToString();
+            // nowTime = _testCountTime.ToString("F1");
+
         }
 
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (gameObject.tag == "Goal")
+        {
+            stop = true;
+            SaveData savedata = new SaveData(_CountTime.ToString("F1"));
+            PlayerPrefs.SetString("SaveData", _CountTime.ToString("F1"));
+            Debug.Log("json");
+            SceneManager.LoadScene(Scene);
+            //Timer _time = gameObject.AddComponent<Timer>();
+            /*PlayerPrefs.SetString("time", nowTime);
+            PlayerPrefs.Save();
+            Debug.Log(PlayerPrefs.GetString("time") + "Save");*/
+
+            /*Json _c = new Json();//ÉGÉâÅ[Ç…Ç»ÇÈ
+            Save(_c);*/
+        }
+
+    }
+   /* public void Save(Json _c)
+    {
+string jsonstr = JsonUtility.ToJson(_c);
+        StreamWriter writer = new StreamWriter(datapath, false);
+        writer.WriteLine(jsonstr);
+        writer.Flush();
+        writer.Close();
+    }*/
 }
+
