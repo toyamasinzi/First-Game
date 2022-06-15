@@ -2,22 +2,38 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using System.IO;
+
+[System.Serializable]
+public class RankingData
+{
+    public float[] time;
+
+}
 
 public class Ranking : MonoBehaviour
 {
-    [SerializeField] GameObject tim;
-    
-    // Start is called before the first frame update
-    void Start()
+    private string dataPath;
+
+    private void Awake()
     {
-      /* string trm = PlayerPrefs.GetString("time","999");
-        tim.GetComponent<Text>().text = trm;
-        PlayerPrefs.DeleteAll();*/
+        dataPath = Application.dataPath + "/DataRanking.json";
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        RankingData data = new RankingData();
+        float[] _sd = { 1, 2, 3 };
+        data.time = _sd;
+        SaveRanking(data);
+    }
+    public void SaveRanking(RankingData data)
+    {
+        string jsonData = JsonUtility.ToJson(data);
+        StreamWriter writer = new StreamWriter(dataPath, false);
+        writer.WriteLine(jsonData);
+        writer.Flush();
+        writer.Close();
+        Debug.Log(dataPath);
     }
 }
