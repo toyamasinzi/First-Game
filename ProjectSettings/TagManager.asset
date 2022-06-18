@@ -12,6 +12,7 @@ TagManager:
   - Goal
   - Destroy
   - Delite
+  - Audio
   layers:
   - Default
   - TransparentFX
