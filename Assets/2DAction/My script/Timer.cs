@@ -43,7 +43,7 @@ public class Timer : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+     void OnCollisionEnter2D(Collision2D collision)
     {
         if (gameObject.tag == "Goal")
         {
@@ -52,6 +52,8 @@ public class Timer : MonoBehaviour
             string json = JsonUtility.ToJson(savedata);
             PlayerPrefs.SetString("SaveData", _CountTime.ToString("F1"));
             //Debug.Log($"JSON: {json}");
+            
+            
 
             //Debug.Log("json");
             SceneManager.LoadScene(Scene);

@@ -1,24 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Enemy : MonoBehaviour
+public class HardEnemy : MonoBehaviour
 {
     [SerializeField] GameObject player1;//オブジェクトを参照する
     [SerializeField] GameObject right;
     [SerializeField] GameObject audio;
-    [SerializeField] string Scene = "GameOver";
+    [SerializeField] string Scene = "GameOverHard";
     [SerializeField] float speed = 1f;
+    [SerializeField] float acclerator = 2;
     [SerializeField] float _tim = 0;
     [SerializeField] int count = 3;
     [SerializeField] int count2 = 6;
-    //[SerializeField] AudioClip se;
+    private bool _sp = false;
 
-    private AudioSource ad;
-
-    private void Start()
-    {
-        ad = GetComponent<AudioSource>();
-    }
 
     private void Update()
     {
@@ -28,9 +23,11 @@ public class Enemy : MonoBehaviour
         {
             right.SetActive(true);
             audio.SetActive(true);
-            
+            _sp = true;
+
             if (_tim > count2)
             {
+                _sp = false;
                 right.SetActive(false);
                 audio.SetActive(false);
                 _tim = 0;
@@ -43,6 +40,10 @@ public class Enemy : MonoBehaviour
         Vector2 targeting = (player1.transform.position - this.transform.position).normalized;
         //プレイヤー追う
         this.GetComponent<Rigidbody2D>().velocity = new Vector2((targeting.x * speed), (targeting.y * speed));
+        if( _sp == true)
+        {
+            this.GetComponent<Rigidbody2D>().velocity = new Vector2((targeting.x * acclerator), (targeting.y * acclerator));
+        }
 
     }
     void OnCollisionEnter2D(Collision2D collision)

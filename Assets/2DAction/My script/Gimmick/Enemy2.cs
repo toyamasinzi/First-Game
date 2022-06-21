@@ -4,9 +4,28 @@ using UnityEngine.SceneManagement;
 public class Enemy2 : MonoBehaviour
 {
     [SerializeField] GameObject player2; //オブジェクトを参照する
+    [SerializeField] GameObject right;
     [SerializeField] string Scene = "GameOver";
     [SerializeField] float speed = 1f;
+    [SerializeField] float _tim = 0;
+    [SerializeField] int count = 3;
+    [SerializeField] int count2 = 6;
 
+    private void Update()
+    {
+        _tim += Time.deltaTime;
+
+        if (_tim > count)
+        {
+            right.SetActive(true);
+
+            if (_tim > count2)
+            {
+                right.SetActive(false);
+                _tim = 0;
+            }
+        }
+    }
     void FixedUpdate()
     {
         //プレイヤー-敵キャラの位置関係から方向を取得し、速度を一定化

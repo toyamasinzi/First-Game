@@ -8,7 +8,6 @@ using System.IO;
 public class RankingData
 {
     public float[] time;
-
 }
 
 public class Ranking : MonoBehaviour
@@ -17,15 +16,21 @@ public class Ranking : MonoBehaviour
 
     private void Awake()
     {
-        dataPath = Application.dataPath + "/DataRanking.json";
+        dataPath = Application.dataPath + "/Resources/DataRanking.json";
     }
 
     void Start()
     {
-        RankingData data = new RankingData();
-        float[] _sd = { 1, 2, 3 };
-        data.time = _sd;
-        SaveRanking(data);
+        RankingBoard data = new RankingBoard();
+       /* List<string> _sd = data.GetRankingTexts();
+        //data.time = _sd;
+        RankingData ranking = new RankingData();
+        for (var i = 0; i < _sd.Count; i++) 
+        {
+            ranking.time[i] = float.Parse(_sd[i]);
+        }
+            SaveRanking(ranking);*/
+
     }
     public void SaveRanking(RankingData data)
     {
