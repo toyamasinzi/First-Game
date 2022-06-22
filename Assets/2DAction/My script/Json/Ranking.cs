@@ -21,7 +21,7 @@ public class Ranking : MonoBehaviour
 
     void Start()
     {
-        RankingBoard data = new RankingBoard();
+       // RankingBoard data = new RankingBoard();
        /* List<string> _sd = data.GetRankingTexts();
         //data.time = _sd;
         RankingData ranking = new RankingData();

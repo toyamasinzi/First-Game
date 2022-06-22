@@ -11,7 +11,6 @@ public class Enemy : MonoBehaviour
     [SerializeField] float _tim = 0;
     [SerializeField] int count = 3;
     [SerializeField] int count2 = 6;
-    //[SerializeField] AudioClip se;
 
     private AudioSource ad;
 
