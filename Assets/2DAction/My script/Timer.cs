@@ -13,14 +13,7 @@ public class Timer : MonoBehaviour
 
     public string nowTime;
 
-    public float _CountTime;
-    string datapath;
-    private string _Save;
-
-    public void Awake()
-    {
-        datapath = Application.dataPath + "/TimeRanking";
-    }
+    public static float _CountTime;
     void Start()
     {
         gameObject.GetComponent<Text>();
@@ -43,37 +36,19 @@ public class Timer : MonoBehaviour
 
     }
 
-     void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         if (gameObject.tag == "Goal")
         {
             stop = true;
-            SaveData savedata = new SaveData(_CountTime.ToString("F1"));
-            string json = JsonUtility.ToJson(savedata);
-            PlayerPrefs.SetString("SaveData", _CountTime.ToString("F1"));
-            //Debug.Log($"JSON: {json}");
-            
-            
-
-            //Debug.Log("json");
             SceneManager.LoadScene(Scene);
-            //Timer _time = gameObject.AddComponent<Timer>();
-            /*PlayerPrefs.SetString("time", nowTime);
-            PlayerPrefs.Save();
-            Debug.Log(PlayerPrefs.GetString("time") + "Save");*/
-
-            /*Json _c = new Json();//ÉGÉâÅ[Ç…Ç»ÇÈ
-            Save(_c);*/
         }
-
     }
-   /* public void Save(Json _c)
+         public static float getTime()
     {
-string jsonstr = JsonUtility.ToJson(_c);
-        StreamWriter writer = new StreamWriter(datapath, false);
-        writer.WriteLine(jsonstr);
-        writer.Flush();
-        writer.Close();
-    }*/
+
+        return _CountTime;
+    }
 }
+
 
