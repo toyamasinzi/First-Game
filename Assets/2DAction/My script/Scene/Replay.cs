@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class NewBehaviourScript : MonoBehaviour
 {
-    [SerializeField] string Scene = "Game";
+    [SerializeField] string _Scene = "Game";
     void OnCollisionEnter2D(Collision2D collision)
     {
-        SceneManager.LoadScene(Scene);
+        SceneManager.LoadScene(_Scene);
     }
 }

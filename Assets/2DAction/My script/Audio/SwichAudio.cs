@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class SwichAudio : MonoBehaviour
 {
-    [SerializeField] AudioClip se;
-    private AudioSource Adi;
+    [SerializeField] AudioClip _se;
+    private AudioSource _Adi;
 
     void Start()
     {
-        Adi = GetComponent<AudioSource>();
+        _Adi = GetComponent<AudioSource>();
     }
 
     // ‚Ô‚Â‚©‚Á‚½Žž‚É‰¹‚ð–Â‚ç‚·
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Adi.PlayOneShot(se); 
+        _Adi.PlayOneShot(_se); 
     }
 }

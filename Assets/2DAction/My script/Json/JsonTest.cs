@@ -7,18 +7,18 @@ using UnityEngine;
 /// </summary>
 public class JsonTest : MonoBehaviour
 {
-    RankingData rankingData;
+    RankingData _rankingData;
     void Start()
     {
         JsonModel.CreateJson(new RankingData(new float[] {10f, 5f},//保存
             new string[] {"プレイヤーA", "プレイヤーB" }),
             Application.persistentDataPath + "/RankingData.json");
 
-        RankingData data = JsonModel.LoadJson<RankingData>(Application.persistentDataPath + "/RankingData.json");//ロード
+        RankingData _data = JsonModel.LoadJson<RankingData>(Application.persistentDataPath + "/RankingData.json");//ロード
         
-        for(int i = 0; i < data.Names.Length; i++)//ランキング
+        for(int i = 0; i < _data.Names.Length; i++)//ランキング
         {
-            print($"{data.Names[i]}は{data.Times[i]}秒にゴールした");
+            print($"{_data.Names[i]}は{_data.Times[i]}秒にゴールした");
         }
     }
 }

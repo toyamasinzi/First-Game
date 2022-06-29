@@ -5,9 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class TitleScene : MonoBehaviour
 {
-    [SerializeField] string Scene = "Result";
+    [SerializeField] string _Scene = "Result";
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        SceneManager.LoadScene(Scene);
+        SceneManager.LoadScene(_Scene);
     }
 }

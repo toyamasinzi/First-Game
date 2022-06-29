@@ -6,20 +6,20 @@ public class Board2 : MonoBehaviour
 {
     [SerializeField] GameObject _board;
     [SerializeField] GameObject _dstoroy;
-    [SerializeField] AudioClip se;
-    private AudioSource Adi;
+    [SerializeField] AudioClip _se;
+    private AudioSource _Adi;
 
     private bool _Audio = false;
     private bool _played = true;
     void Start()
     {
-        Adi = GetComponent<AudioSource>();
+        _Adi = GetComponent<AudioSource>();
     }
     void Update()
     {
         if (_Audio && _played)
         {
-            Adi.PlayOneShot(se);
+            _Adi.PlayOneShot(_se);
             _played = false;
         }
     }

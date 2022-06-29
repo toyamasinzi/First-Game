@@ -4,7 +4,7 @@ public class DestroyAudio : MonoBehaviour
 {
    // [SerializeField] AudioClip se;
     //private AudioSource Adi;
-    [SerializeField] AudioClip Clip;
+    [SerializeField] AudioClip _Clip;
 
     void Start()
     {
@@ -12,11 +12,11 @@ public class DestroyAudio : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-     AudioSource.PlayClipAtPoint(Clip, transform.position);
+     AudioSource.PlayClipAtPoint(_Clip, transform.position);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-     AudioSource.PlayClipAtPoint(Clip, transform.position);
+     AudioSource.PlayClipAtPoint(_Clip, transform.position);
     }
 }

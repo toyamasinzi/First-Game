@@ -12,14 +12,14 @@ public static class JsonModel
     /// <returns>読み込んだデータ</returns>
     public static T LoadJson<T>(string path)
     {
-        using var reader = new StreamReader(path, System.Text.Encoding.GetEncoding("UTF-8"));
+        using var _reader = new StreamReader(path, System.Text.Encoding.GetEncoding("UTF-8"));
 
-        var jsonStr = reader.ReadToEnd();
-        reader.Close();
+        var _jsonStr = _reader.ReadToEnd();
+        _reader.Close();
 
-        Debug.Log($"通常ファイル読み込んだJsonファイルの内容{jsonStr}");
+        Debug.Log($"通常ファイル読み込んだJsonファイルの内容{_jsonStr}");
 
-        return JsonUtility.FromJson<T>(jsonStr);
+        return JsonUtility.FromJson<T>(_jsonStr);
     }
 
     /// <summary>
@@ -29,14 +29,14 @@ public static class JsonModel
     /// <param name="path">読み込みたいデータのパス</param>
     public static void CreateJson<T>(T data, string path)
     {
-        using var writer = new StreamWriter(path);
+        using var _writer = new StreamWriter(path);
 
-        var jsonStr = JsonUtility.ToJson(data);
+        var _jsonStr = JsonUtility.ToJson(data);
 
-        Debug.Log($"作成したJsonファイルの内容{jsonStr}\nパス{path}");
+        Debug.Log($"作成したJsonファイルの内容{_jsonStr}\nパス{path}");
 
-        writer.Write(jsonStr);
-        writer.Flush();
-        writer.Close();
+        _writer.Write(_jsonStr);
+        _writer.Flush();
+        _writer.Close();
     }
 }

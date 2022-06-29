@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class AudioCollider : MonoBehaviour
 {
-    [SerializeField] AudioClip Se;
-    private AudioSource As;
+    [SerializeField] AudioClip _Se;
+    private AudioSource _As;
     void Start()
     {
-        As = GetComponent<AudioSource>();
+        _As = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        As.PlayOneShot(Se);
+        _As.PlayOneShot(_Se);
     }
 }

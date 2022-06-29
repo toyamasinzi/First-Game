@@ -7,7 +7,7 @@ public class KeepTime : MonoBehaviour
 {
     [SerializeField] GameObject _kptm;
     float _nowTime;
-    [SerializeField] InputField inputField;
+    [SerializeField] InputField _inputField;
 
     void Start()
     { 

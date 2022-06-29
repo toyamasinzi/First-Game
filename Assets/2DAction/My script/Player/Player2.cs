@@ -3,37 +3,36 @@ using UnityEngine;
 public class Player2 : MonoBehaviour
 {
     //インスペクターで設定する
-    [SerializeField] float speed;
-    [SerializeField] private Player _playerCs;
-    public Animator anim;
-    public bool isKey = false;
+    [SerializeField] float _speed;
+    public Animator _anim;
+    public bool _isKey = false;
     /*
     private string playerName = "Player2";
     private bool NowPlayer = false;
     */
-    float h = 0;
-    float v = 0;
-    private Rigidbody2D rb2d;
-    private Vector2 dir = new Vector2(0, 0);
-    private Vector2 lastdir = new Vector2(0, -1);
+    float _h = 0;
+    float _v = 0;
+    private Rigidbody2D _rb2d;
+    private Vector2 _dir = new Vector2(0, 0);
+    private Vector2 _lastdir = new Vector2(0, -1);
 
 
-    public bool move;
+    public bool _move;
    // public int dir;
     void Start()
     {
-        anim = GetComponent<Animator>();
-        rb2d = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
+        _rb2d = GetComponent<Rigidbody2D>();
     }
 
     void Update()
 
     {
-        h = Input.GetAxisRaw("Player2Horizontal");
-        v = Input.GetAxisRaw("Player2Vertical");
-        dir = new Vector2(h, v);
+        _h = Input.GetAxisRaw("Player2Horizontal");
+        _v = Input.GetAxisRaw("Player2Vertical");
+        _dir = new Vector2(_h, _v);
 
-        rb2d.velocity = dir.normalized * speed;
+        _rb2d.velocity = _dir.normalized * _speed;
         /*if (this.gameObject.tag == playerName)
          {
              //操作
@@ -99,34 +98,34 @@ public class Player2 : MonoBehaviour
     }
     private void Animate()
     {
-        if (Mathf.Abs(dir.x) > 0.5f)
+        if (Mathf.Abs(_dir.x) > 0.5f)
         {
-            lastdir.x = dir.x;
-            lastdir.y = 0;
+            _lastdir.x = _dir.x;
+            _lastdir.y = 0;
         }
-        if (Mathf.Abs(dir.y) > 0.5f)
+        if (Mathf.Abs(_dir.y) > 0.5f)
         {
-            lastdir.y = dir.y;
-            lastdir.x = 0;
+            _lastdir.y = _dir.y;
+            _lastdir.x = 0;
         }
-        anim.SetFloat("x", dir.x);
-        anim.SetFloat("y", dir.y);
-        anim.SetFloat("StopMoveX", lastdir.x);
-        anim.SetFloat("StopMoveY", lastdir.y);
-        anim.SetFloat("Input", dir.magnitude);
+        _anim.SetFloat("x", _dir.x);
+        _anim.SetFloat("y", _dir.y);
+        _anim.SetFloat("StopMoveX", _lastdir.x);
+        _anim.SetFloat("StopMoveY", _lastdir.y);
+        _anim.SetFloat("Input", _dir.magnitude);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.TryGetComponent(out KeyDestroy keyCs)) 
         {
-            isKey = true;
+            _isKey = true;
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Door" && isKey) 
+        if (collision.gameObject.tag == "Door" && _isKey) 
         {
             Destroy(collision.gameObject);
         }

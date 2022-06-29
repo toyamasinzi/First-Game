@@ -7,27 +7,27 @@ using System.IO;
 
 public class Timer : MonoBehaviour
 {
-    public GameObject trm;
-    private bool stop = false;
-    [SerializeField] string Scene = "Result";
+    public GameObject _trm;
+    private bool _stop = false;
+    [SerializeField] string _Scene = "Result";
 
-    public string nowTime;
+    public string _nowTime;
 
     public static float _CountTime;
     void Start()
     {
         gameObject.GetComponent<Text>();
-        trm = GameObject.Find("_timer");
+        _trm = GameObject.Find("_timer");
         _CountTime = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (stop == false)
+        if (_stop == false)
         {
             _CountTime += Time.deltaTime;
-            trm.GetComponent<Text>().text = _CountTime.ToString("F1");
+            _trm.GetComponent<Text>().text = _CountTime.ToString("F1");
             //trm.GetComponent<Text>().text = Time.time.ToString("F1");
             //json _c =  _CountTime.ToString();
             // nowTime = _testCountTime.ToString("F1");
@@ -40,8 +40,8 @@ public class Timer : MonoBehaviour
     {
         if (gameObject.tag == "Goal")
         {
-            stop = true;
-            SceneManager.LoadScene(Scene);
+            _stop = true;
+            SceneManager.LoadScene(_Scene);
         }
     }
          public static float getTime()

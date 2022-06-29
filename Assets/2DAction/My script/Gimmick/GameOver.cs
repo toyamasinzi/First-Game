@@ -3,12 +3,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOver : MonoBehaviour
 {
-    [SerializeField] string Scene = "GameOver";
+    [SerializeField] string _Scene = "GameOver";
     private void OnCollisionEnter2D(Collision2D collision)
     {
      if(gameObject.tag == "Destroy")
         {
-            SceneManager.LoadScene(Scene);
+            SceneManager.LoadScene(_Scene);
         }
     }
 }

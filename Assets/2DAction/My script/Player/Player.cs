@@ -5,33 +5,33 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //インスペクターで設定する
-   [SerializeField] float speed;//速度
-    public Animator anim;
-    float h = 0;
-    float v = 0;
+   [SerializeField] float _speed;//速度
+    public Animator _anim;
+    float _h = 0;
+    float _v = 0;
 
     /*private string playerName = "Player1";
     private bool NowPlayer = false;*/
-    private Rigidbody2D rb2d;
-    public bool move;
+    private Rigidbody2D _rb2d;
+    public bool _move;
     //public int dir;
-    private Vector2 dir = new Vector2(0, 0);
-    private Vector2 lastdir = new Vector2(0, -1);
+    private Vector2 _dir = new Vector2(0, 0);
+    private Vector2 _lastdir = new Vector2(0, -1);
 
  
     void Start()
     {
-        anim = GetComponent<Animator>();
-        rb2d = GetComponent<Rigidbody2D>();
+        _anim = GetComponent<Animator>();
+        _rb2d = GetComponent<Rigidbody2D>();
     }
 
     void Update()
     {
-        h = Input.GetAxisRaw("Horizontal");
-        v = Input.GetAxisRaw("Vertical");
-        dir = new Vector2(h, v);
+        _h = Input.GetAxisRaw("Horizontal");
+        _v = Input.GetAxisRaw("Vertical");
+        _dir = new Vector2(_h, _v);
 
-        rb2d.velocity = dir.normalized * speed;
+        _rb2d.velocity = _dir.normalized * _speed;
         
         //Animate();
 
@@ -103,21 +103,21 @@ public class Player : MonoBehaviour
     }
     private void Animate()
     {
-        if(Mathf.Abs(dir.x) > 0.5f)
+        if(Mathf.Abs(_dir.x) > 0.5f)
         {
-            lastdir.x = dir.x;
-            lastdir.y = 0;
+            _lastdir.x = _dir.x;
+            _lastdir.y = 0;
         }
-        if(Mathf.Abs(dir.y) > 0.5f)
+        if(Mathf.Abs(_dir.y) > 0.5f)
         {
-            lastdir.y = dir.y;
-            lastdir.x = 0;
+            _lastdir.y = _dir.y;
+            _lastdir.x = 0;
         }
-        anim.SetFloat("x", dir.x);
-        anim.SetFloat("y", dir.y);
-        anim.SetFloat("StopMoveX",lastdir.x);
-        anim.SetFloat("StopMoveY", lastdir.y);
-        anim.SetFloat("Input", dir.magnitude);
+        _anim.SetFloat("x", _dir.x);
+        _anim.SetFloat("y", _dir.y);
+        _anim.SetFloat("StopMoveX",_lastdir.x);
+        _anim.SetFloat("StopMoveY", _lastdir.y);
+        _anim.SetFloat("Input", _dir.magnitude);
     }
 
     

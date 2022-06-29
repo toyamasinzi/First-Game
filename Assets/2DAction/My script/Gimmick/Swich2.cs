@@ -5,14 +5,14 @@ using UnityEngine;
 public class Swich2 : MonoBehaviour
 {
     //定義する
-    [SerializeField] Animator MoveBlockAnimator;
-    [SerializeField] string animStateName2 = "MoveBlock";
+    [SerializeField] Animator _MoveBlockAnimator;
+    [SerializeField] string _animStateName2 = "MoveBlock";
 
     private void OnTriggerEnter2D(Collider2D collision) //コライダーがトリガーだったら反応する
     {
         if (collision.gameObject.tag == "Player1")//プレイヤー１
         {
-            MoveBlockAnimator.Play(animStateName2);//アニメーションを再生する
+            _MoveBlockAnimator.Play(_animStateName2);//アニメーションを再生する
         }
     }
 }
