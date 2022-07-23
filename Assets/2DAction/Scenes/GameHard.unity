@@ -3138,7 +3138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &127963488
 GameObject:
   m_ObjectHideFlags: 0
@@ -8059,8 +8059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4721a4a075430254cacab190851b8cdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shelfAnimator: {fileID: 1804661656}
-  animStateName: ShelfAnim
+  _shelfAnimator: {fileID: 1804661656}
+  _animStateName: ShelfAnim
 --- !u!50 &359274903
 Rigidbody2D:
   serializedVersion: 4
@@ -8190,7 +8190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e247b1e67a83cc44ca0960087b7f0aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  se: {fileID: 8300000, guid: 978f3ffd3f4d1de4a8c797bd97240ade, type: 3}
+  _se: {fileID: 8300000, guid: 978f3ffd3f4d1de4a8c797bd97240ade, type: 3}
 --- !u!1 &360817323
 GameObject:
   m_ObjectHideFlags: 0
@@ -12626,8 +12626,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f76ba7c379bb974ab01f80dcafc5454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 908406083}
-  player2: {fileID: 1350373406}
+  _player1: {fileID: 908406083}
+  _player2: {fileID: 1350373406}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -12854,7 +12854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003234ca0146dbc4fb113423188fcb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Clip: {fileID: 8300000, guid: cc2222fcf9be96d41b307d246edc638c, type: 3}
+  _Clip: {fileID: 8300000, guid: cc2222fcf9be96d41b307d246edc638c, type: 3}
 --- !u!82 &519940546
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15761,8 +15761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15d0594c924221544941b4d40cd66e00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  danroAnimator: {fileID: 1006231731}
-  animStateName: Fireplace
+  _danroAnimator: {fileID: 1006231731}
+  _animStateName: Fireplace
 --- !u!82 &657145209
 AudioSource:
   m_ObjectHideFlags: 0
@@ -15871,7 +15871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e247b1e67a83cc44ca0960087b7f0aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  se: {fileID: 8300000, guid: 978f3ffd3f4d1de4a8c797bd97240ade, type: 3}
+  _se: {fileID: 8300000, guid: 978f3ffd3f4d1de4a8c797bd97240ade, type: 3}
 --- !u!1 &663373484
 GameObject:
   m_ObjectHideFlags: 0
@@ -17361,7 +17361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &725021600
 GameObject:
   m_ObjectHideFlags: 0
@@ -17564,7 +17564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &746826837
 GameObject:
   m_ObjectHideFlags: 0
@@ -17856,7 +17856,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 003234ca0146dbc4fb113423188fcb32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Clip: {fileID: 8300000, guid: 2cfede31d20d54042ad2fdf39b6f55bd, type: 3}
+  _Clip: {fileID: 8300000, guid: 2cfede31d20d54042ad2fdf39b6f55bd, type: 3}
 --- !u!1 &761324696
 GameObject:
   m_ObjectHideFlags: 0
@@ -19519,8 +19519,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c9000a4fcdb71247be772d2d92e1659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Moves: {fileID: 725021602}
-  animStateName: Move
+  _Moves: {fileID: 725021602}
+  _animStateName: Move
 --- !u!61 &837920299
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21545,9 +21545,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d676c900dc507d4b956da6097f58fe2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  anim: {fileID: 0}
-  move: 0
+  _speed: 3
+  _anim: {fileID: 0}
+  _move: 0
 --- !u!61 &908406085
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21607,7 +21607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f184510130ee74eb532e595b00542e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOver
+  _Scene: GameOverHard
 --- !u!1 &915024426
 GameObject:
   m_ObjectHideFlags: 0
@@ -22983,8 +22983,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c007b35b3cea3bc4c870ad743e0edb9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Moveanim: {fileID: 1964351959}
-  animStateName: MOve Destroy2
+  _Moveanim: {fileID: 1964351959}
+  _animStateName: MOve Destroy2
 --- !u!50 &960773131
 Rigidbody2D:
   serializedVersion: 4
@@ -23328,8 +23328,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76920cefe6f457142b14229c14b48352, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveBlockAnimator: {fileID: 1075055225}
-  animStateName2: MoveBlock
+  _MoveBlockAnimator: {fileID: 1075055225}
+  _animStateName2: MoveBlock
 --- !u!50 &990220681
 Rigidbody2D:
   serializedVersion: 4
@@ -23537,7 +23537,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 5b44dd2ef961683489b1537cfe4f5ab0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -24515,14 +24515,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f33240195a958a14da7e734e67655631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player2: {fileID: 1350373401}
-  right: {fileID: 451635409}
-  Scene: GameOverHard
-  speed: 1
-  acclerator: 2
+  _player2: {fileID: 1350373401}
+  Light: {fileID: 451635409}
+  _Scene: GameOverHard
+  _speed: 3
+  _acclerator: 2
   _tim: 0
-  count: 3
-  count2: 6
+  _count: 3
+  _count2: 6
 --- !u!1 &1024435756
 GameObject:
   m_ObjectHideFlags: 0
@@ -24648,7 +24648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &1027310585
 GameObject:
   m_ObjectHideFlags: 0
@@ -25875,7 +25875,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &1081293634
 GameObject:
   m_ObjectHideFlags: 0
@@ -29167,7 +29167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e247b1e67a83cc44ca0960087b7f0aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  se: {fileID: 8300000, guid: 978f3ffd3f4d1de4a8c797bd97240ade, type: 3}
+  _se: {fileID: 8300000, guid: 978f3ffd3f4d1de4a8c797bd97240ade, type: 3}
 --- !u!82 &1194575694
 AudioSource:
   m_ObjectHideFlags: 0
@@ -29978,7 +29978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &1211937298
 GameObject:
   m_ObjectHideFlags: 0
@@ -61792,11 +61792,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a466a7c7889e6f4cb64c7bf7c8291ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  _playerCs: {fileID: 908406084}
-  anim: {fileID: 0}
-  isKey: 0
-  move: 0
+  _speed: 3
+  _anim: {fileID: 0}
+  _isKey: 0
+  _move: 0
 --- !u!95 &1350373404
 Animator:
   serializedVersion: 3
@@ -61915,7 +61914,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58f184510130ee74eb532e595b00542e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOver
+  _Scene: GameOverHard
 --- !u!1 &1356119812
 GameObject:
   m_ObjectHideFlags: 0
@@ -65256,15 +65255,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2518fbdbc3b8e0c498b244ef9829b242, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player1: {fileID: 908406080}
-  right: {fileID: 696479864}
-  audio: {fileID: 283042778}
-  Scene: GameOverHard
-  speed: 1
-  acclerator: 2
+  _player1: {fileID: 908406080}
+  _Light: {fileID: 696479864}
+  _audio: {fileID: 283042778}
+  _Scene: GameOverHard
+  _speed: 3
+  _acclerator: 2
   _tim: 0
-  count: 3
-  count2: 6
+  _count: 3
+  _count2: 6
 --- !u!58 &1499678170
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -132171,7 +132170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &1559531615
 GameObject:
   m_ObjectHideFlags: 0
@@ -135683,7 +135682,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &1716782690
 GameObject:
   m_ObjectHideFlags: 0
@@ -137056,7 +137055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baaeb4dbfe0d08a44a9e15c040475d96, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  se: {fileID: 8300000, guid: 9a515a6dd0f7eb348b24f967f2124fd7, type: 3}
+  _se: {fileID: 8300000, guid: 9a515a6dd0f7eb348b24f967f2124fd7, type: 3}
 --- !u!1 &1779298328
 GameObject:
   m_ObjectHideFlags: 0
@@ -137962,7 +137961,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 5b44dd2ef961683489b1537cfe4f5ab0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138337,7 +138336,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &1819507900
 GameObject:
   m_ObjectHideFlags: 0
@@ -138434,10 +138433,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52b47b44cdb57b439be40209540a8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trm: {fileID: 0}
-  Scene: Result
-  nowTime: 
-  _CountTime: 0
+  _trm: {fileID: 0}
+  _Scene: Result
+  _nowTime: 
 --- !u!61 &1819507904
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -140740,7 +140738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a14c16cc219951e41abb98f0d124ae37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Se: {fileID: 8300000, guid: 2cfede31d20d54042ad2fdf39b6f55bd, type: 3}
+  _Se: {fileID: 8300000, guid: 2cfede31d20d54042ad2fdf39b6f55bd, type: 3}
 --- !u!82 &1937215016
 AudioSource:
   m_ObjectHideFlags: 0
@@ -141441,7 +141439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!61 &1964351963
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -142312,7 +142310,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &2005255288
 GameObject:
   m_ObjectHideFlags: 0
@@ -142630,7 +142628,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _board: {fileID: 1194575688}
   _dstoroy: {fileID: 1773673084}
-  se: {fileID: 8300000, guid: 9a515a6dd0f7eb348b24f967f2124fd7, type: 3}
+  _se: {fileID: 8300000, guid: 9a515a6dd0f7eb348b24f967f2124fd7, type: 3}
 --- !u!114 &2022356570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -142643,7 +142641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e247b1e67a83cc44ca0960087b7f0aeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  se: {fileID: 8300000, guid: 978f3ffd3f4d1de4a8c797bd97240ade, type: 3}
+  _se: {fileID: 8300000, guid: 978f3ffd3f4d1de4a8c797bd97240ade, type: 3}
 --- !u!82 &2022356571
 AudioSource:
   m_ObjectHideFlags: 0
@@ -143816,7 +143814,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f14408fff845e3c4aad3fb713d12ffa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Scene: GameOverHard
+  _Scene: GameOverHard
 --- !u!1 &2098632141
 GameObject:
   m_ObjectHideFlags: 0
@@ -144161,10 +144159,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b52b47b44cdb57b439be40209540a8f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trm: {fileID: 0}
-  Scene: Result
-  nowTime: 
-  _CountTime: 0
+  _trm: {fileID: 0}
+  _Scene: Result
+  _nowTime: 
 --- !u!114 &2125362529
 MonoBehaviour:
   m_ObjectHideFlags: 0

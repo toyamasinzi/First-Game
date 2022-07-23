@@ -383,8 +383,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f572fc9134038448c041d1b5904e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0
-  Scene: Title
+  _count: 0
+  _Scene: Title
 --- !u!114 &273099220
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -931,8 +931,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f572fc9134038448c041d1b5904e69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  count: 0.5
-  Scene: GameHard
+  _count: 0.5
+  _Scene: GameHard
 --- !u!1 &1676028705
 GameObject:
   m_ObjectHideFlags: 0

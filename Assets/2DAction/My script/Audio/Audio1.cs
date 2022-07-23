@@ -14,7 +14,7 @@ public class Audio1 : MonoBehaviour
     }
     private void OnDisable()
     {
-        Debug.Log("1111");
         _Adi.PlayOneShot(_se);
+        Debug.Log("1111");
     }
 }

@@ -31,7 +31,6 @@ public class Timer : MonoBehaviour
             //trm.GetComponent<Text>().text = Time.time.ToString("F1");
             //json _c =  _CountTime.ToString();
             // nowTime = _testCountTime.ToString("F1");
-
         }
 
     }
